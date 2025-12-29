@@ -1,0 +1,6 @@
+asgiref==3.11.0
+Django==5.0
+Paquete_Leandro @ file:///C:/Users/lmolina/Documents/Leandro/Python%20Coderhouse/Clase_8/TP.N%C2%B02-LeandroMolina/dist/paquete_leandro-0.1.0.tar.gz#sha256=5c83037e7ca181f12be7fc943e2079229fc908381b18c133114103d07220ece1
+setuptools==80.9.0
+sqlparse==0.5.5
+tzdata==2025.3
