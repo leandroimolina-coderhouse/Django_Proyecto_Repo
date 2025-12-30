@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamentos</title>
+    <title>Lista de Departamentos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            text-align: center;
+        }
+
+        ol {
+            display: inline-block;
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    {{departamentos}}
-    {% for dpto in departamentos%}
-       <li>{{dpto.nombre}}</li> 
-       <li>{{dpto.nro_departamento}}</li> 
-    {% end for %}
+    <div class="contenedor">
+        <h2>Departamentos</h2>
+
+        <ol>
+            {% for depto in departamentos %}
+                <li>
+                    {{ depto.nombre }} — {{ depto.nro_departamentos }}
+                </li>
+            {% empty %}
+                <li>No hay departamentos disponibles</li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
 </html>
