@@ -16,12 +16,12 @@
         .hero {
             background: linear-gradient(135deg, #e3f2fd, #ffffff);
             padding: 80px 20px;
-        }
+        } 
         .hero h1 {
-            color: #0d6efd;
+            color: #0d25fd;
         }
         .hero p {
-            color: #6c757d;
+            color: #786c7d;
             font-size: 1.1rem;
         }
         .card {
@@ -45,7 +45,7 @@
                         <a class="nav-link active" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'Listar_departamentos' %}">Departamentos</a>
+                        <a class="nav-link" href="{% url 'listar_departamentos' %}">Departamentos</a>
                     </li>
                 </ul>
             </div>
@@ -53,19 +53,22 @@
     </nav>
 
     <!-- Hero Section -->
+    {% block Bienvenidos %}
     <section class="hero text-center">
         <div class="container">
             <h1 class="fw-bold mb-3">Bienvenidos a Nuestro Hospital</h1>
             <p class="mb-4">
                 Brindamos atención médica de calidad, con profesionales especializados
-                y tecnología moderna para cuidar tu salud.
+                y tecnología moderna para cuidar tu salud. Excelencia
             </p>
             <a href="#" class="btn btn-primary btn-lg">Conocer Departamentos</a>
             <button type="button" class="btn btn-primary">Ver Medicos</button>
         </div>
     </section>
+    {% endblock %}
 
     <!-- Cards Section -->
+    {% block Contenido %} 
     <section class="py-5">
         <div class="container">
             <div class="row g-4">
@@ -90,6 +93,14 @@
             </div>
         </div>
     </section>
+    {% endblock %}
+
+    <!-- FOOTER -->
+     <footer class="bg-white text-center py-5 shadow-sm">
+        <p class="mb-0 text-muted">
+            2025 Hospital . Todos los derechos reservados
+        </p>
+     </footer>     
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
