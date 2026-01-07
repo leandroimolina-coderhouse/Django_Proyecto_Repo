@@ -4,6 +4,7 @@ from Hospital.models import *
 
 #admin.site.register(DepartamentoMedico)
 
+
 @admin.register(DepartamentoMedico)
 class DepartamentoMedicoAdmin(admin.ModelAdmin):
     # Columnas visibles en la lista del modelo
@@ -18,3 +19,5 @@ class DepartamentoMedicoAdmin(admin.ModelAdmin):
     ordering = ("nro_departamento", "nombre")
     # Campos de solo lectura
     readonly_fields = ("fecha_de_creacion",)
+
+
